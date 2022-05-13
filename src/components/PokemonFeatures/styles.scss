@@ -1,0 +1,76 @@
+.pokemonFeatures {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.4em;
+  background: linear-gradient(
+    to bottom,
+    rgba(243, 183, 208, 0.918),
+    rgba(202, 114, 114, 0.712)
+  );
+
+  .pf-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  .pf-types-and-moves {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5em;
+
+    .pfm-title {
+      p {
+        font-weight: 500;
+        font-size: 0.9em;
+      }
+    }
+
+    .pfmat-title {
+      margin-bottom: 0.5em;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .pf-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .pf-type {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.6em;
+        font-weight: 500;
+        margin-right: 0.4em;
+
+        .pft-item {
+          background-color: rgb(255, 206, 229);
+          border-radius: 1em;
+          padding: 0.2em 0.4em 0.3em 0.4em;
+        }
+      }
+    }
+
+    .pflist-moves {
+      .pftype-moves {
+        .pfmitem-move {
+          border: none;
+          font-size: 1em;
+          font-weight: 500;
+          background-color: rgb(241, 215, 194);
+          transition: all 250ms ease;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(241, 196, 159);
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+  }
+}

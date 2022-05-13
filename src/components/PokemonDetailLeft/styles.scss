@@ -1,0 +1,61 @@
+.pd-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.4em;
+  // linear background gradient
+  background: linear-gradient(
+    to bottom,
+    rgba(226, 161, 161, 0.5),
+    rgba(230, 204, 135, 0.5)
+  );
+
+  .pd-title {
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+
+  .pdl-add-btn {
+    font-size: 1em;
+    background: linear-gradient(
+      to bottom,
+      rgba(243, 183, 208, 0.918),
+      rgba(202, 114, 114, 0.712)
+    );
+    border-radius: 0.8em;
+    border: none;
+    cursor: pointer;
+    padding: 0.3em 0.5em;
+    transition: all 200ms ease;
+
+    &:hover {
+      box-shadow: 0 2px 8px rgb(85, 85, 85);
+    }
+  }
+
+  .pd-image {
+    width: 16em;
+    margin-bottom: 0.6em;
+  }
+
+  .atrribute {
+    font-weight: 500;
+    margin: 0.3em 0;
+  }
+
+  .pdl-height {
+    font-weight: 500;
+    padding: 0.3em 0.6em;
+    background-color: rgb(250, 216, 154);
+    border-radius: 2em;
+  }
+
+  .pdl-weight {
+    font-weight: 500;
+    padding: 0.3em 0.6em;
+    background-color: rgb(252, 195, 172);
+    border-radius: 2em;
+  }
+}

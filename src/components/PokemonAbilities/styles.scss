@@ -1,0 +1,21 @@
+.pokemonAbilitiesCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.4em;
+  // linear background gradient
+  background: linear-gradient(
+    to bottom,
+    rgba(187, 248, 240, 0.5),
+    rgba(168, 240, 150, 0.5)
+  );
+
+  .pa-title {
+    font-size: 2em;
+    width: 80%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1em;
+  }
+}

@@ -1,0 +1,19 @@
+.pa-ability {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  background-color: rgb(204, 245, 170);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+
+  .pa-a {
+  }
+
+  .pa-ability-name {
+    margin-bottom: 0.6em;
+  }
+
+  .pa-ability-description {
+  }
+}
