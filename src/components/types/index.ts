@@ -20,7 +20,7 @@ type Ability = {
   }
 }
 
-export type Abilities = Array<Ability>
+export type Abilities = Ability[]
 
 type Move = {
   move: {
@@ -29,7 +29,7 @@ type Move = {
   }
 }
 
-export type Moves = Array<Move>
+export type Moves = Move[]
 
 type Type = {
   type: {
@@ -37,7 +37,7 @@ type Type = {
   }
 }
 
-export type Types = Array<Type>
+export type Types = Type[]
 
 export interface Pokemon {
   name: string
@@ -57,7 +57,7 @@ export interface Pokemon {
   types: Types
 }
 
-export type PokemonListArray = Array<{ name: string; url: string }>
+export type PokemonListArray = { name: string; url: string }[]
 
 export type FlavorText = {
   flavor_text: string
@@ -66,4 +66,4 @@ export type FlavorText = {
   }
 }
 
-export type FlavorTextEntries = Array<FlavorText>
+export type FlavorTextEntries = FlavorText[]
