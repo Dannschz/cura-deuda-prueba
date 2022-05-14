@@ -3,7 +3,12 @@
   display: grid;
   justify-items: center;
   width: 85vw;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Hacer que las columnas se llenen de acuerdo al tamaño definido 
+  en minmax, así se ajusta el tamaño de las columnas a la pantalla 
+  y se hace responsive el diseño */
   grid-gap: 1em;
   margin-top: 25vh;
   margin-bottom: 4em;

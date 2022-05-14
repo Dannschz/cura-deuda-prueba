@@ -7,6 +7,7 @@ import Pokedex from './pages/Pokedex'
 
 function App() {
   return (
+    // Este componente provee el store global para toda la aplicación
     <Provider store={store}>
       <Router>
         <Switch>

@@ -8,6 +8,7 @@ const initialState: NameState = {
   value: '',
 }
 
+// Slice de ejemplo para ver como podemos construir el store global apartir de multiples porciones
 export const nameSlice = createSlice({
   // Esta porción del estado se usa para cambiar el nombre del pokedex
   name: 'name',
