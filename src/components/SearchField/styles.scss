@@ -47,8 +47,9 @@
   }
 
   .hambMenu {
+    position: relative;
+
     .hambMenuBtn {
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -71,6 +72,7 @@
       position: absolute;
       background-color: rgb(48, 48, 48);
       border-radius: 5px;
+      right: calc(0px + 1em);
       // top: calc(100% + 1em);
 
       .ul-menu {

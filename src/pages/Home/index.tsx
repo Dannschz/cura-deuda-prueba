@@ -26,6 +26,8 @@ function Home() {
     }
     fetchPokemonList()
   }, [])
+  
+  console.log(pokemonList)
 
   return (
     <div className='App'>

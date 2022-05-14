@@ -4,11 +4,12 @@ import './styles.scss'
 
 interface PokemonListProps {
   pokemonList: PokemonListArray
+  marginTop?: string
 }
 
-function PokemonList({ pokemonList }: PokemonListProps) {
+function PokemonList({ pokemonList, marginTop }: PokemonListProps) {
   return (
-    <div className='pokemonList'>
+    <div className='pokemonList' style={{ marginTop }}>
       {pokemonList.map(pokemon => {
         return (
           <PokemonCard

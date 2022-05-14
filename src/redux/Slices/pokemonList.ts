@@ -1,23 +1,31 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { Pokemon } from '../../components/types'
+
+interface PokemonsState {
+  value: Pokemon[]
+}
+
+const initialState: PokemonsState = {
+  value: [],
+}
 
 export const pokemonsSlice = createSlice({
   // Usamos esta porción del estado para manejar la lista de pokemons (añadir y quitar pokemones)
   name: 'pokemons',
-  initialState: {
-    value: [] as Pokemon[],
-  },
+  initialState,
   reducers: {
-    catchPokemon: (state, action: { payload: Pokemon }) => {
+    catchPokemon: (state, action: PayloadAction<Pokemon>) => {
+      // evitar que se añada un pokemon que ya está en la lista
+      if (state.value.find(pokemon => pokemon.id === action.payload.id)) {
+        return state
+      }
       state.value.push(action.payload)
     },
-    removePokemon: (state, action: { payload: string }) => {
+    removePokemon: (state, action: PayloadAction<string>) => {
       state.value = state.value.filter(pokemon => pokemon.id !== action.payload)
     },
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { catchPokemon, removePokemon } = pokemonsSlice.actions
-
 export default pokemonsSlice.reducer
