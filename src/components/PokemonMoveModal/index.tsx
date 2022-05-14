@@ -8,10 +8,12 @@ interface PokemonMoveModalProps {
   closeModal: () => void
 }
 
+// modal renderiza el movimiento seleccionado
 function PokemonMoveModal({ urlMove, closeModal }: PokemonMoveModalProps) {
   const [moveDesc, setMoveDesc] = useState('')
 
   useEffect(() => {
+    // obtener la descripcion del movimiento mediante la url
     const getMove = async (url: string) => {
       const response = await fetch(url)
       const data: { flavor_text_entries: FlavorTextEntries } =

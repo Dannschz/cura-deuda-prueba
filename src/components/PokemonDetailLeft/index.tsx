@@ -18,6 +18,7 @@ function PokemonDetailLeft({ pokemon }: PokemonDetailLeftProps) {
 
   const handleAddPokemon = () => {
     if (pokemon) {
+      // ejecutar la accion de agregar pokemon usando dispatch
       dispatch(catchPokemon(pokemon))
       /* setShowMessage({
         show: true,

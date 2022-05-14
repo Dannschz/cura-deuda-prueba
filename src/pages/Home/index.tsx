@@ -1,22 +1,16 @@
 import React, { useEffect } from 'react'
-import { useLocation } from 'wouter'
 import HeaderSearchAndMenu from '../../components/HeaderSearchAndMenu'
 import PokemonList from '../../components/PokemonList'
 import { PokemonListArray } from '../../components/types'
+import useSearchHook from '../../hooks/useSearchHook'
 import './styles.scss'
 
 const POKEMON_URL = 'https://pokeapi.co/api/v2/pokemon/'
 
+// Pagina princilap que renderiza una lista de pokemones
 function Home() {
-  const [searchValue, setSearchValue] = React.useState('')
-  const [, setLocation] = useLocation()
   const [pokemonList, setPokemonList] = React.useState<PokemonListArray>([])
-
-  useEffect(() => {
-    if (searchValue) {
-      setLocation(`/pokemon/${searchValue}`)
-    }
-  }, [searchValue])
+  const setSearchValue = useSearchHook()
 
   useEffect(() => {
     const fetchPokemonList = async () => {
@@ -26,7 +20,9 @@ function Home() {
     }
     fetchPokemonList()
   }, [])
-  
+
+  // >
+
   console.log(pokemonList)
 
   return (

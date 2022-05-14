@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
-import { Link } from "wouter"
-import { Pokemon } from "../types"
-import "./styles.scss"
+import React, { useEffect } from 'react'
+import { Link } from 'wouter'
+import { Pokemon } from '../types'
+import './styles.scss'
 
 interface PokemonCardProps {
   name: string
@@ -13,7 +13,7 @@ function PokemonCard({ name, url }: PokemonCardProps) {
 
   useEffect(() => {
     const fetchPokemon = async () => {
-      // Traer el pokemon mediante la url
+      // Traer la info del pokemon mediante la url
       const response = await fetch(url)
       const data = await response.json()
       setPokemon(data)
@@ -22,17 +22,16 @@ function PokemonCard({ name, url }: PokemonCardProps) {
   }, [])
 
   return (
-    <Link href={`/pokemon/${pokemon?.name}`} className="pokemonCard">
+    <Link href={`/pokemon/${pokemon?.name}`} className='pokemonCard'>
       <img
-        className="pc-imgfront"
+        className='pc-imgfront'
         src={pokemon?.sprites?.other.home.front_default}
-        alt=""
+        alt=''
         width={64}
         height={64}
-        loading="lazy"
+        loading='lazy'
       />
       <h3>{name}</h3>
-      {/* <span className="pc-tooltip">Click to see pokemon details</span> */}
     </Link>
   )
 }

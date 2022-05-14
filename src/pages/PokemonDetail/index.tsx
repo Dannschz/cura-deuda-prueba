@@ -1,27 +1,21 @@
 import React, { useEffect } from 'react'
-import { useLocation } from 'wouter'
 import HeaderSearchAndMenu from '../../components/HeaderSearchAndMenu'
 import PokemonAbilities from '../../components/PokemonAbilities'
 import PokemonDetailLeft from '../../components/PokemonDetailLeft'
 import PokemonFeatures from '../../components/PokemonFeatures'
 import PokemonStats from '../../components/PokemonStats'
 import { Pokemon } from '../../components/types'
+import useSearchHook from '../../hooks/useSearchHook'
 import './styles.scss'
 
 interface PokemonDetailsProps {
   params: { name: string } // la propiedad params viene de la url en PokemonCard
 }
 
+// Contiene la información del pokemon
 function PokemonDetail({ params }: PokemonDetailsProps) {
-  const [searchValue, setSearchValue] = React.useState('')
+  const setSearchValue = useSearchHook()
   const [pokemonDetail, setPokemonDetail] = React.useState<Pokemon>()
-  const [, setLocation] = useLocation()
-
-  useEffect(() => {
-    if (searchValue) {
-      setLocation(`/pokemon/${searchValue}`)
-    }
-  }, [searchValue])
 
   useEffect(() => {
     const getPokemon = async () => {

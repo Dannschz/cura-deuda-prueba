@@ -1,3 +1,6 @@
+/* Estas interfaces son para los tipos de datos que se usan en los componentes 
+y tienen el mismo nombre de la información que viene de la API */
+
 export type Stat = {
   name: string
   url: string
@@ -63,4 +66,4 @@ export type FlavorText = {
   }
 }
 
-export type FlavorTextEntries = Array<FlavorText> // esta forma del tipo es la misma de la pokeapi
+export type FlavorTextEntries = Array<FlavorText>

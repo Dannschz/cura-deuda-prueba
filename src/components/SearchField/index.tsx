@@ -8,13 +8,14 @@ interface SearchFieldProps {
   setSearchValue: React.Dispatch<React.SetStateAction<string>>
 }
 
+// Buscar un pokemon por nombre
 function SearchField({ setSearchValue }: SearchFieldProps) {
-  const [inputValue, setInputValue] = React.useState('')
+  const [nameValue, setInputValue] = React.useState('') //
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSearchValue(inputValue)
+    setSearchValue(nameValue)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,14 +36,14 @@ function SearchField({ setSearchValue }: SearchFieldProps) {
             name='pokemon'
             id='pokemon'
             placeholder='Search a pokemon'
-            value={inputValue}
+            value={nameValue}
             onChange={handleChange}
           />
           <button
             type='button'
             className='sf-searchButton'
             onClick={e => {
-              setSearchValue(inputValue)
+              setSearchValue(nameValue)
             }}>
             <img className='sf-sb-searchIcon' src={buscarIcon} alt='buscar' />
           </button>

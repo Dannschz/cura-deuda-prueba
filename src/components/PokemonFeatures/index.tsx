@@ -17,8 +17,9 @@ function PokemonFeatures({ features }: PokemonFeaturesProps) {
   const [urlMove, setUrlMove] = useState('')
 
   const handleMoveClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    setUrlMove(e.currentTarget.value)
+    // cambiar el estado del modal a true para que se renderice y establecer la url del move para pasarla al modal
     setShowMoveModal(true)
+    setUrlMove(e.currentTarget.value)
   }
 
   useEffect(() => {

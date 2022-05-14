@@ -1,21 +1,13 @@
-import React, { useEffect } from 'react'
-import { useLocation } from 'wouter'
 import HeaderSearchAndMenu from '../../components/HeaderSearchAndMenu'
 import PokemonList from '../../components/PokemonList'
+import useSearchHook from '../../hooks/useSearchHook'
 import { useAppSelector } from '../../redux/hooks'
 import './styles.scss'
 
+// Contiene la lista de los pokemones en la pokedex
 function Pokedex() {
-  const [searchValue, setSearchValue] = React.useState('')
-  const [, setLocation] = useLocation()
-  const store = useAppSelector(state => state)
-
-  useEffect(() => {
-    if (searchValue) {
-      setLocation(`/pokemon/${searchValue}`)
-    }
-    console.log(store)
-  }, [searchValue])
+  const setSearchValue = useSearchHook()
+  const store = useAppSelector(state => state) // el store global
 
   return (
     <div className='pokedexPage'>
