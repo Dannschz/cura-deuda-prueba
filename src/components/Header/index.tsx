@@ -8,7 +8,7 @@ function Header() {
       <header className="App-header">
         <h1 className="ah-title">
           <Link href="/">Feliz Día del Amor!!</Link>
-          <h2>¿Quieres ser mi San Valentin?</h2>
+          <h2 className="san">¿Quieres ser mi San Valentin?</h2>
         </h1>
         <img
           className="ah-img-pokebola"
