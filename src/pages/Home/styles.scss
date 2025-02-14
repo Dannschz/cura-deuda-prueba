@@ -4,10 +4,24 @@
 
 @font-face {
   font-family: "PokemonFont";
-  src: url("../../assets/fonts/Pokemon\ Hollow.ttf") format("truetype");
+  src: url("../../assets/fonts/ValentineSoul.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Valentine";
+  src: url("../../assets/fonts/KissingSeason.ttf") format("truetype");
+}
+
+body {
+  background-image: url('../../assets/img/love2BG.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .mainContentApp {
+  scroll-behavior: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

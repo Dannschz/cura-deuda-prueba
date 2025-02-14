@@ -4,4 +4,12 @@
   position: fixed;
   top: 0;
   z-index: 5;
+
+  .message_love {
+    display: flex;
+    padding: 1rem;
+    font-family: 'Valentine';
+    font-size: 1.5rem;
+    color: rgb(155, 0, 0);
+  }
 }

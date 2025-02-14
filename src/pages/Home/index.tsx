@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
+// import React, { useEffect } from 'react'
 import HeaderSearchAndMenu from '../../components/HeaderSearchAndMenu'
-import PokemonList from '../../components/PokemonList'
+/* import PokemonList from '../../components/PokemonList'
 import { PokemonListArray } from '../../components/types'
-import useSearchHook from '../../hooks/useSearchHook'
+import useSearchHook from '../../hooks/useSearchHook' */
 import './styles.scss'
 
-const POKEMON_URL = 'https://pokeapi.co/api/v2/pokemon/'
+// const POKEMON_URL = 'https://pokeapi.co/api/v2/pokemon/'
 
 // Pagina princilap que renderiza una lista de pokemones
 function Home() {
-  const [pokemonList, setPokemonList] = React.useState<PokemonListArray>([])
+  /* const [pokemonList, setPokemonList] = React.useState<PokemonListArray>([])
   const setSearchValue = useSearchHook()
 
   useEffect(() => {
@@ -24,12 +24,17 @@ function Home() {
   // >
 
   console.log(pokemonList)
-
+ */
   return (
     <div className='App'>
-      <HeaderSearchAndMenu setSearchValue={setSearchValue} />
+      <iframe
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+        width={0}
+        height={0}
+        src='https://www.youtube.com/embed/RWxQ6lCV0PU?autoplay=1'></iframe>
+      <HeaderSearchAndMenu />
       <main className='mainContentApp'>
-        <PokemonList pokemonList={pokemonList} />
+        {/* <img src="../../assets/img/loveBG.jpg" alt="" /> */}
       </main>
     </div>
   )
